@@ -13,6 +13,7 @@
 		413CA10727AB4CC8006D7F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413CA10627AB4CC8006D7F15 /* Assets.xcassets */; };
 		413CA11627AC41A8006D7F15 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413CA11527AC41A8006D7F15 /* PokemonViewController.swift */; };
 		C2B41FD627AC71D5004A55FE /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B41FD527AC71D5004A55FE /* Pokemon.swift */; };
+		C2B41FD827AC8F03004A55FE /* PokemonNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B41FD727AC8F03004A55FE /* PokemonNetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		413CA10B27AB4CC8006D7F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		413CA11527AC41A8006D7F15 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 		C2B41FD527AC71D5004A55FE /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		C2B41FD727AC8F03004A55FE /* PokemonNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonNetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		C23E081527AC6F7E00EB0AE5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C2B41FD727AC8F03004A55FE /* PokemonNetworkController.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B41FD827AC8F03004A55FE /* PokemonNetworkController.swift in Sources */,
 				413CA0FE27AB4CC7006D7F15 /* AppDelegate.swift in Sources */,
 				C2B41FD627AC71D5004A55FE /* Pokemon.swift in Sources */,
 				413CA11627AC41A8006D7F15 /* PokemonViewController.swift in Sources */,

@@ -12,7 +12,7 @@ class PokemonNetworkController {
     
     private static let baseURLString = "https://pokeapi.co"
     
-    static func fetchPokemon(name searchTerm: String, completion: @escaping ([Pokemon]?) -> Void) {
+    static func fetchPokemon(name searchTerm: String, completion: @escaping (Pokemon?) -> Void) {
         
         guard let baseUrl = URL(string: baseURLString) else {return}
         
@@ -52,12 +52,8 @@ class PokemonNetworkController {
         }.resume()
     }
     
-    static func getImage(from seachTerm: String, completion: @escaping (UIImage?) -> Void) {
-        guard let baseUrl = URL(string: baseURLString) else {return}
-        
-        var urlComponents = URLComponents.init(url: baseUrl, resolvingAgainstBaseURL: true)
-        
-        guard let finalURL = urlComponents?.url else { return }
+    static func getImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
+        guard let finalURL = URL(string: urlString) else {return}
         print(finalURL)
         
         URLSession.shared.dataTask(with: finalURL) { data, _, error in

@@ -53,16 +53,16 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6gg-TS-lwd">
-                                <rect key="frame" x="93.5" y="114" width="227" height="37"/>
+                                <rect key="frame" x="89.5" y="114" width="235" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcM-h8-WYl">
-                                        <rect key="frame" x="0.0" y="15" width="6.5" height="7.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                                        <rect key="frame" x="0.0" y="9.5" width="14.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld9-vt-DrA">
-                                        <rect key="frame" x="16.5" y="0.0" width="210.5" height="37"/>
+                                        <rect key="frame" x="24.5" y="0.0" width="210.5" height="37"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

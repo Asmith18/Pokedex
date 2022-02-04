@@ -26,22 +26,21 @@ class PokemonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         pokemonSearchBar.delegate = self
+        pokemonMovesTableView.delegate = self
+        pokemonMovesTableView.dataSource = self
     }
     
     
    private func updateViews() {
         
         guard let pokemon = pokemon else { return }
-        self.pokemonNameLabel.text = pokemon.name
-       self.pokemonIDLabel.text = "\(pokemon.id)"
-       pokemonMovesTableView.reloadData()
-        
        PokemonNetworkController.getImage(from: pokemon.spritePath) { image in
             DispatchQueue.main.async {
                 self.pokemonSpriteImageView.image = image
+                self.pokemonNameLabel.text = pokemon.name
+                self.pokemonIDLabel.text = "\(pokemon.id)"
+                self.pokemonMovesTableView.reloadData()
             }
         }
     }
@@ -51,18 +50,18 @@ extension PokemonViewController: UITableViewDelegate, UITableViewDataSource, UIS
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return pokemon?.moves.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moveCell", for: indexPath)
-        
+        cell.textLabel?.text = pokemon?.moves[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "\(pokemonMovesTableView)"
+        return "Moves"
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -71,6 +70,7 @@ extension PokemonViewController: UITableViewDelegate, UITableViewDataSource, UIS
         
         PokemonNetworkController.fetchPokemon(name: searchText) { pokemon in
             guard let pokemon = pokemon else { return }
+            self.pokemon = pokemon
         }
     }
     
